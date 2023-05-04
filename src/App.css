@@ -7,13 +7,37 @@
   pointer-events: none;
 }
 
-
 .black-nav{
   display: flex;
   background-color: #000;
   color: #fff;
   padding-left: 20px;
 }
+
+div{
+  box-sizing: border-box;
+}
+
+.list{
+  padding-left: 20px;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
