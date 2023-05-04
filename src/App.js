@@ -10,7 +10,7 @@ function App() {
   let post = '강남 우동 맛집';
   // 데이터바인등은{중괄호}
 
-  // style을 넣을때는 style={{스타일명 : '값'}}
+  // 인라인으로 style을 넣을때는 style={{스타일명 : '값'}}
 
   // +++++ state +++++
   // 자료 잠깐 저장할땐 state 사용 (state 만드는 법)
@@ -86,6 +86,17 @@ function App() {
       <div className="list">
         <h4>{글제목[2]}</h4>
         <p>2월 17일 발행</p>
+      </div>
+
+      <div className="list">
+        <h4>{글제목2}</h4>
+        <p>2월 17일 발행</p>
+      </div>
+
+      <div className="modal">
+        <h4>제목</h4>
+        <p>날짜</p>
+        <p>상세내용</p>
       </div>
     </div>
   );
