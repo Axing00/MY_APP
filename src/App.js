@@ -1,13 +1,13 @@
 // eslint-disable
 /*eslint-disable*/
 
-import './App.css';
-import { useState } from 'react';
+import "./App.css";
+import { useState } from "react";
 
 function App() {
   // javascript 경우
   // document.querySelector('h4').innerHTML = post;
-  let post = '강남 우동 맛집';
+  let post = "강남 우동 맛집";
   // 데이터바인등은{중괄호}
 
   // 인라인으로 style을 넣을때는 style={{스타일명 : '값'}}
@@ -18,11 +18,15 @@ function App() {
   // 2. useState(보관할 자료)
   // 3. let [작명, 작명]
 
-  let [글제목1, b] = useState('남자 코트 추천');
-  let [글제목2, c] = useState('강남 우동맛집');
-  let [글제목3, d] = useState('파이썬독학');
+  let [글제목1, b] = useState("남자 코트 추천");
+  let [글제목2, c] = useState("강남 우동맛집");
+  let [글제목3, d] = useState("파이썬독학");
 
-  let [글제목, 글제목변경] = useState(['남자 코트 추천', '강남 우동맛집', '파이썬독학']);
+  let [글제목, 글제목변경] = useState([
+    "남자 코트 추천",
+    "강남 우동맛집",
+    "파이썬독학",
+  ]);
   // a 는 state에 보관했던 자료 나옴
   // b 는 state 변경 도와주는 함수
 
@@ -35,7 +39,7 @@ function App() {
   return (
     <div className="App">
       <div className="black-nav">
-        <h4 style={{ color: 'red', fontSzie: '16px' }}>ReactBlog</h4>
+        <h4 style={{ color: "red", fontSzie: "16px" }}>ReactBlog</h4>
       </div>
       <h4>{post}</h4>
 
@@ -54,7 +58,7 @@ function App() {
         onClick={() => {
           // ... 은 괄호 벗겨주세요 라는 의미
           let copy = [...글제목];
-          copy[0] = '여자코트 추천';
+          copy[0] = "여자코트 추천";
           글제목변경(copy);
         }}
 
@@ -81,6 +85,7 @@ function App() {
       <div className="list">
         <h4>{글제목[1]}</h4>
         <p>2월 17일 발행</p>
+        <p></p>
       </div>
 
       <div className="list">
