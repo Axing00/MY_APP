@@ -24,6 +24,17 @@ div {
   border-bottom: 1px solid #ccc;
 }
 
+.thumb_up {
+  cursor: pointer;
+}
+
+.modal {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #eee;
+  text-align: left;
+}
+
 
 
 

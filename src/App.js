@@ -26,6 +26,9 @@ function App() {
     "남자 코트 추천",
     "강남 우동맛집",
     "파이썬독학",
+    "좋아요1",
+    "좋아요2",
+    "좋아요3",
   ]);
   // a 는 state에 보관했던 자료 나옴
   // b 는 state 변경 도와주는 함수
@@ -71,6 +74,7 @@ function App() {
         <h4>
           {글제목[0]}
           <span
+            className="thumb_up"
             onClick={() => {
               따봉변경(따봉 + 1);
             }}
@@ -83,7 +87,18 @@ function App() {
       </div>
 
       <div className="list">
-        <h4>{글제목[1]}</h4>
+        <h4>
+          {글제목[1]}
+          <span
+            className="thumb_up"
+            onClick={() => {
+              따봉변경(따봉 + 1);
+            }}
+          >
+            👍
+          </span>
+          {따봉}
+        </h4>
         <p>2월 17일 발행</p>
         <p></p>
       </div>
@@ -98,11 +113,45 @@ function App() {
         <p>2월 17일 발행</p>
       </div>
 
-      <div className="modal">
-        <h4>제목</h4>
-        <p>날짜</p>
-        <p>상세내용</p>
+      <div className="list">
+        <h4>
+          {글제목[3]}
+          <span
+            className="thumb_up"
+            onClick={() => {
+              따봉변경(따봉 + 1);
+            }}
+          >
+            👍
+          </span>
+          {따봉}
+        </h4>
+        <p>2월 17일 발행</p>
       </div>
+      <div className="list">
+        <h4>{글제목[4]}</h4>
+        <p>2월 17일 발행</p>
+      </div>
+      <div className="list">
+        <h4>{글제목[5]}</h4>
+        <p>2월 17일 발행</p>
+      </div>
+
+      <Modal></Modal>
+    </div>
+  );
+}
+
+let Modal2 = () => {
+  return <div></div>;
+};
+
+function Modal() {
+  return (
+    <div className="modal">
+      <h4>제목</h4>
+      <p>날짜</p>
+      <p>상세내용</p>
     </div>
   );
 }
