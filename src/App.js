@@ -21,7 +21,7 @@ function App() {
   let [글제목1, b] = useState("남자 코트 추천");
   let [글제목2, c] = useState("강남 우동맛집");
   let [글제목3, d] = useState("파이썬독학");
-
+  let [글제목4, e] = useState("아 재밌다");
   let [글제목, 글제목변경] = useState([
     "남자 코트 추천",
     "강남 우동맛집",
