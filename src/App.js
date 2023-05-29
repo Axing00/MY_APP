@@ -33,11 +33,17 @@ function App() {
   // a 는 state에 보관했던 자료 나옴
   // b 는 state 변경 도와주는 함수
 
-  // ?? state 는 언제 사용해야함?
-  // 변동시 자동으로 html에 반영되게 만들고 싶을때
-  // 자주 변경될거 같은 html 부분은 state 로 만들어 놓기 (날짜, 클래스네임 같은)
+  /*
+    ?? state 는 언제 사용해야함?
+    변동시 자동으로 html에 반영되게 만들고 싶을때
+    자주 변경될거 같은 html 부분은 state 로 만들어 놓기 (날짜, 클래스네임 같은)
+  */
 
+  // 따봉 useState
   let [따봉, 따봉변경] = useState(0);
+
+  // 따봉 useState 여러개
+  let [개별따봉, 개별따봉변경] = useState([0, 0, 0, 0, 0, 0]);
 
   // 모달창 만들기 useState
   let [modal, setModal] = useState(false);
@@ -144,7 +150,7 @@ function App() {
       {modal == true ? <Modal /> : null}
 
       {/* map()으로 같은 html 반복생성하는 법 */}
-      <h2 style={{ backgroundColor: "yellow" }}>
+      {/* <h2 style={{ backgroundColor: "yellow" }}>
         map()으로 같은 html 반복생성하는 법
       </h2>
       {글제목.map(function () {
@@ -154,10 +160,10 @@ function App() {
             <p>2월 21일 발행</p>
           </div>
         );
-      })}
+      })} */}
 
       {/* 같은내용만 반복되지 않게 하기 */}
-      <h2 style={{ backgroundColor: "yellow" }}>
+      {/* <h2 style={{ backgroundColor: "yellow" }}>
         같은 내용으로 반복되지 않게 만들기
       </h2>
       {글제목.map(function (a) {
@@ -167,7 +173,7 @@ function App() {
             <p>5월 10일 발행</p>
           </div>
         );
-      })}
+      })} */}
 
       {/* 따봉표시 각자 변경되게하기 */}
       <h2 style={{ backgroundColor: "yellow" }}>따봉표시 각자 변경되게하기</h2>
@@ -178,13 +184,15 @@ function App() {
             <span
               className="thumb_up"
               onClick={() => {
-                따봉변경(따봉 + 1);
+                let copy2 = [...개별따봉];
+                copy2[i] = copy2[i] + 1;
+                개별따봉변경(copy2);
               }}
             >
               👍
             </span>
-            {따봉}
-            <p>2월 21일 발행</p>
+            {개별따봉[i]}
+            <p>6월 18일 발행</p>
           </div>
         );
       })}
